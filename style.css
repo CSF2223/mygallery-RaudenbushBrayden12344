@@ -1,7 +1,11 @@
 /*
 Color Palette:
-background color:  
-font color:        
-secondary color:   
-tertiary color:    
+background color: #334257
+font color: #476072 
+secondary color: #548CA8   
+tertiary color: #EEEEEE    
 */
+
+.background {
+    background-color: #334257;
+}
