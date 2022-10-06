@@ -1,11 +1,28 @@
 /*
 Color Palette:
 background color: #334257
-font color: #476072 
+font color: #EEEEEE
 secondary color: #548CA8   
-tertiary color: #EEEEEE    
+tertiary color: #476072 
 */
 
-.background {
-    background-color: #334257;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+header {
+    text-align: center;
+    padding-bottom: 4px;
+    box-shadow: 4px 4px 4px 4px black;
 }
+
+body {
+    background-color: #334257 ;
+    color: #EEEEEE;
+    font-family: 'Open sans', sans-serif;
+    text-align: center;
+    
+}
+
+    
+    
