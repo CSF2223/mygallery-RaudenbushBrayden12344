@@ -40,7 +40,8 @@
             </div>
         </div>
 
-        <div class="imagec" <img src="assets/february012.jpg" alt="Snowy Mountain"></img>
+        <div class="imagec">
+            <img src="assets/february012.jpg" alt="Snowy Mountain"></img>
             <div class="cardt">
                 <cite>Snowny Mountain</cite>
                 <p><a href="https://www.pics4learning.com/details.php?img=february012.jpg"> Hailey, Suzan from Pics4Learning </a></p>
@@ -85,8 +86,55 @@
                 <cite>Coral Mountain</cite>
                 <p><a href="https://www.pics4learning.com/details.php?img=coralmountains.jpg"> Kolk, Melinda from Pics4Learning </a></p>
             </div>
-        </div>
+
+            
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Return to the Top</button>
+            <script>
+                // Get the button:
+                let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    }
+                    else {
+                        mybutton.style.display = "none";
+                    }
+
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+                    
+
+                }
+            </script>
+
     </section>
+<section id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="comment">
+        <p v-for="items in item" v-text="items"></p>
+          </div><!--End Comment-->
+          </div><!--End col -->
+          </div><!-- End row -->
+      <div class="row">
+        <div class="col-6">
+      <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        </div><!-- End col -->
+      </div><!--End Row -->
+    </div><!--End Container -->
+  </section><!-- end App -->
 
 </body>
 
