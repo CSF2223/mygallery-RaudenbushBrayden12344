@@ -1,1 +1,179 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mountain Image Gallery</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Mountain</h1>
+        <h4>Image Gallery</h4>
+    </header>
+
+
+    <section class="gallery">
+        <div class="imagec">
+            <img src="assets/coloradofri035.jpg" alt="Rocky Mountains"></img>
+            <div class="cardt">
+                <cite>Rocky Mountains</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=coloradofri035.jpg"> Dupuy, Nancy from Pics4Learning </a></p>
+            </div>
+        </div>
+        <div class="imagec">
+            <img src="assets/inlandpassage.jpg" alt="Mountian Range with British Sea"></img>
+            <div class="cardt">
+                <cite>Mountain Range with British Sea</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=inlandpassage.jpg"> Ransom, Kenneth from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/mypictures017.jpg" alt="Mountian with lake"></img>
+            <div class="cardt">
+                <cite>Mountain with Lake</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=mypictures017.jpg"> Lamoureux, Connie from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/february012.jpg" alt="Snowy Mountain"></img>
+            <div class="cardt">
+                <cite>Snowny Mountain</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=february012.jpg"> Hailey, Suzan from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/andes.jpg" alt="Andes Mountains"></img>
+            <div class="cardt">
+                <cite>Andes Mountains</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=andes.jpg"> Canipe, Steve from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/tccan028.jpg" alt="Mountain Scenery"></img>
+            <div class="cardt">
+                <cite>Mountain Scenery</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=tccan028.jpg"> Covington, Ted from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/tn067.jpg" alt="Mountain Scene in Tennessee"></img>
+            <div class="cardt">
+                <cite>Mountain Scene in Tennessee</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=tn067.jpg"> Lilly, Vickie from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/air003.jpg" alt="Mountain in Washington"></img>
+            <div class="cardt">
+                <cite>Mountain in Washington</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=tn067.jpg"> Bias, Gene from Pics4Learning </a></p>
+            </div>
+        </div>
+
+        <div class="imagec">
+            <img src="assets/coralmountains.jpg" alt="Coral Mountains"></img>
+            <div class="cardt">
+                <cite>Coral Mountain</cite>
+                <p><a href="https://www.pics4learning.com/details.php?img=coralmountains.jpg"> Kolk, Melinda from Pics4Learning </a></p>
+            </div>
+
+
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Return to the Top</button>
+            <script>
+                // Get the button:
+                let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    }
+                    else {
+                        mybutton.style.display = "none";
+                    }
+
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+
+
+                }
+            </script>
+
+    </section>
+    <section id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="comment">
+                        <p v-for="items in item" v-text="items"></p>
+                    </div>
+                    <!--End Comment-->
+                </div>
+                <!--End col -->
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-6">
+                    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                    <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                </div><!-- End col -->
+            </div>
+            <!--End Row -->
+        </div>
+        <!--End Container -->
+    </section><!-- end App -->
+
+    <!-- Vue JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+
+    </script>
+
+
+
+    <form role="search" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <button>
+            <svg viewBox="0 0 1024 1024">
+                <path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+            </svg>
+        </button>
+    </form>
+    <script>
+        const f = document.getElementById('form');
+        const q = document.getElementById('query');
+        const google = 'https://www.google.com/search?q=site%3A+';
+        
+
+        function submitted(event) {
+            event.preventDefault();
+            const url = google + '+' + q.value;
+            const win = window.open(url, '_blank');
+            win.focus();
+        }
+
+        f.addEventListener('submit', submitted);
+    </script>
+
+
+</body>
+
+</html>
